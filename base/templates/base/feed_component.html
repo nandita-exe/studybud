@@ -7,7 +7,7 @@
   <div class="card-header">
     <a href="{% url 'user-profile' room.host.id %}" class="roomListRoom__author text-decoration-none" style="color:#000000">
       <div class="d-flex flex-row">
-        <img src="{{room.host.avatar.url}}" class="avatar avatar--medium active"/>
+        <img src="static{{room.host.avatar.url}}" class="avatar avatar--medium active"/>
         <div class="ms-3">
         <h5 class="">{{room.host.name}}</h5>
         <span class="">@{{room.host.username}}</span>
