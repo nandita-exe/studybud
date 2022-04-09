@@ -3,8 +3,20 @@
 {% block content %}
 <main class="layout">
   <div class="card m-0" >
-    <div class="card-header text-center">
-      <h3>Recent Activities</h3>
+    <div class="card-header text-center">      
+      <div class=" d-flex flex-end m-0">
+        <!-- <div class="room__topLeft"> -->
+            <a href="{{request.META.HTTP_REFERER}}">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 32 32">
+              <title>arrow-left</title>
+              <path
+                d="M13.723 2.286l-13.723 13.714 13.719 13.714 1.616-1.611-10.96-10.96h27.625v-2.286h-27.625l10.965-10.965-1.616-1.607z"
+              ></path>
+            </svg>
+          </a>
+          <h5 class="text-uppercase ms-3">Recent Activities</h5>
+
+      </div>
   
     </div>
 
@@ -18,7 +30,7 @@
                 <div class="d-flex justify-content-between">
                   <a style="color:#781ac5" href="{% url 'user-profile' message.user.id %}" class="roomListRoom__author my-2 text-decoration-none">
                     <div class="d-flex flex-col">
-                      <img src="{{message.user.avatar.url}}" class="avatar--medium active"/>
+                      <img src="{{message.user.avatar.url}}" class="avatar avatar--medium active"/>
                       <div class="ms-3">
                       <h5 class="">{{user.name}}</h5>
                       <span class="">@{{user.username}}</span>
