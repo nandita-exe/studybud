@@ -20,21 +20,20 @@
         
         {% for topic in topics %}
         
-        <li class="list-group-item ">
-          <a href="{% url 'home' %}?q={{topic.name}}" class="text-decoration-none text-dark"></a>
+       <li class="list-group-item ">
+          <a href="{% url 'home' %}?q={{topic.name}}" class="text-decoration-none text-dark">
           <div class="d-flex justify-content-between align-items-start">
-          <div class="ms-2 me-auto">
+          <a href="{% url 'home' %}?q={{topic.name}}" class="ms-2 me-auto text-decoration-none text-dark">
             <div class="fw-bold ">{{topic.name}}</div>
-          </div>
-          <span class="badge rounded-pill"> {{topic.room_set.all.count}}</span>
-        </a>
+          </a>
+          <a href="{% url 'home' %}?q={{topic.name}}" class="badge rounded-pill text-decoration-none text-white"> {{topic.room_set.all.count}}</a>
+        
         </div>
+      </a>
         <div class="ms-2">
       <a href="{{topic.link1}}" class="fw-normal" style="color: blueviolet;">{{topic.link1}}</a>
       </div>
         </li>
-      
-      
 
         {% endfor %}
       </ol>
