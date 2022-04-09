@@ -1,6 +1,6 @@
 from email.policy import default
 # from tkinter import Widget
-from turtle import update
+# from turtle import update
 from django.db import models
 # from django.contrib.auth.models import User
 from django.contrib.auth.models import AbstractUser
