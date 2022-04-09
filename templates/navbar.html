@@ -21,7 +21,7 @@
         <div class="nav-item">
           <!-- <a href="{% url 'user-profile' user.id %}">
             <div class="avatar avatar--medium active">
-              <img src="{{user.avatar.url}}" width=50/>
+              <img src="{{request.user.avatar.url}}" width=50/>
             </div>
             <p>{{request.user.name}}<span>@{{request.user.username}}</span></p>
           </a> -->
